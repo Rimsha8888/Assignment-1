@@ -1,0 +1,9 @@
+.text
+   input:
+   la $a0,disk
+   li $v0,4 
+   syscall #printing string
+   li $v0,5
+   syscall #reading integer
+   move $s0,$v0 #shift input to s0
+   li $t1,1
