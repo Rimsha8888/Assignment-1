@@ -17,3 +17,14 @@
    subi $t1,$t1,1
    la $a0,moves
    li $v0,4 
+ syscall #printing string
+   move $a0,$t1
+   li $v0,1
+   syscall #printing output
+   end:
+   li $v0,10
+   syscall #termination of program
+    
+.data    
+   disk: .asciiz "Enter no.of disks: "
+   moves: "\nThe no. of moves need to solve the tower of hanoi are: "
